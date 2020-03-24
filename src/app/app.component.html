@@ -1,8 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<hr/>
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
+</div>
+
+<hr/>
+<div class="container-fluid">
+  <div class="col-md-6">
+    <h3 class="text-center text-secondary">Add your name here</h3>
+    
+    <form >
+      <div class="form-group">
+        <input class="form-control" type="text">
+      </div>
+  
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-success">Add name into firebase</button>
+      </div>
+    </form>
+
+  </div>
 </div>
 
 <router-outlet></router-outlet>
