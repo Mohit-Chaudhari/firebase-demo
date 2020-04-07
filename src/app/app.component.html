@@ -5,7 +5,6 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-
 <hr/>
 <div class="container-fluid">
   <div class="row">
@@ -54,6 +53,10 @@
     </tbody>
 
     </table>
+
+    <div class="alert alert-info"  *ngIf="showDeletedMessage">
+      Name get deleted from Firebase.
+    </div>
 
   </div>
 </div>

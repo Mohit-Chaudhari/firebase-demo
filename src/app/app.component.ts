@@ -49,10 +49,7 @@ export class AppComponent {
       this.submitted = false;
       this.form.reset();
 
-      this.form.setValue({
-        $key: null,
-        AddName: ''
-      });
+      
     }
   }
 
@@ -66,7 +63,7 @@ export class AppComponent {
     }
   }
 
-  // To get the names from firebase.
+  // To get the data from firebase.
   getName() {
     this.NameList = this.firebase.list('namelist');
     return this.NameList.snapshotChanges();
@@ -78,10 +75,10 @@ export class AppComponent {
   }
 
   // To insert name into firebase.
-  insertName(Name)
+  insertName(FormObject)
   {
     this.NameList.push({
-      AddName: Name.AddName
+      AddName: FormObject.AddName
     });
   }
 
